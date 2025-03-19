@@ -31,15 +31,13 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-        <Stack.Screen name="index" options={{title: "Ed'Moi"}}/>
-        <Stack.Screen name="test" options={{title: "Les formations"}}/>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="index" options={{headerShown: false }}/>
+        {/* <Stack.Screen name="test" options={{title: "Les formations"}}/>
         <Stack.Screen name="formation_create" options={{title: "Créer une formation"}}/>
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="+not-found" /> */}
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
   );
 }
-
-// (<Ionicons name="add-circle" size={30} color={"black"}/>)

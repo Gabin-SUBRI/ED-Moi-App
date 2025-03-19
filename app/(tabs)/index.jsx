@@ -7,10 +7,9 @@
     const App = () => {
         return (
             <View style = {styles.container}>
-                {/* <Text style = {styles.title}>TEST</Text> */}
                 <Link href="/formation" style = {styles.link} asChild>
                 <Pressable style = {styles.button_suivre}>
-                    <Text style = {styles.buttonText}>Suivre une formation</Text>
+                    <Text style = {styles.buttonText}>Suivre une formations</Text>
                 </Pressable>
                 </Link>
                 <Link href="/formation_create" style = {styles.link} asChild>
