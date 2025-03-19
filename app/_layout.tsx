@@ -5,8 +5,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-
+import { Button } from 'react-native';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Ionicons } from '@expo/vector-icons';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -31,12 +32,14 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-        <Stack.Screen name="index.jsx" options={{title: "Ed'Moi"}}/>
-        <Stack.Screen name="test.jsx" options={{title: "Les formations"}}/>
-        <Stack.Screen name="formation_create.jsx" options={{title: "Créer une formation"}}/>
+        <Stack.Screen name="index" options={{title: "Ed'Moi"}}/>
+        <Stack.Screen name="test" options={{title: "Les formations"}}/>
+        <Stack.Screen name="formation_create" options={{title: "Créer une formation"}}/>
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
   );
 }
+
+// (<Ionicons name="add-circle" size={30} color={"black"}/>)
